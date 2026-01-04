@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PenTimer Support</title>
+  <meta name="description" content="Support page for PenTimer." />
+  <style>
+    :root {
+      --bg: #0b0c10;
+      --card: #12141a;
+      --text: #e8eaf0;
+      --muted: #a9afbf;
+      --accent: #6c63ff;
+      --border: rgba(255,255,255,0.08);
+    }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 28px 18px 60px;
+    }
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+    .brand {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+    }
+    .brand h1 {
+      margin: 0;
+      font-size: 26px;
+      letter-spacing: 0.2px;
+    }
+    .tag {
+      font-size: 12px;
+      color: var(--muted);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 5px 10px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px;
+      margin-top: 14px;
+    }
+    h2 {
+      margin: 0 0 10px 0;
+      font-size: 18px;
+    }
+    p, li {
+      color: var(--muted);
+      margin: 0;
+    }
+    ul {
+      margin: 10px 0 0 18px;
+      padding: 0;
+    }
+    a {
+      color: var(--text);
+      text-decoration: underline;
+      text-decoration-color: rgba(255,255,255,0.25);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+    @media (min-width: 760px) {
+      .grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .small {
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .button {
+      display: inline-block;
+      margin-top: 10px;
+      background: var(--accent);
+      color: white;
+      padding: 10px 14px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 13px;
+      color: var(--text);
+      background: rgba(255,255,255,0.06);
+      padding: 2px 6px;
+      border-radius: 6px;
+    }
+    footer {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 12px;
+      opacity: 0.9;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="top">
+      <div class="brand">
+        <h1>PenTimer Support</h1>
+        <div class="tag">Pomodoro 25/5</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Contact</h2>
+      <p>
+        If you need help, please email:
+        <a href="mailto:emirhan@example.com">emirhan@example.com</a>
+      </p>
+      <p class="small" style="margin-top:8px;">
+        Replace the email above with your real support email.
+      </p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h2>Frequently Asked Questions</h2>
+        <ul>
+          <li><strong>Why does the app ask for Calendar permission?</strong><br/>
+            PenTimer saves your focus sessions as events in Apple Calendar (start and end times).
+          </li>
+          <li style="margin-top:10px;"><strong>Does PenTimer collect my data?</strong><br/>
+            No. The app runs locally and does not collect or sell user data.
+          </li>
+          <li style="margin-top:10px;"><strong>How do I enable Calendar access?</strong><br/>
+            Go to <code>Settings → Privacy & Security → Calendars</code> and allow PenTimer.
+          </li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Troubleshooting</h2>
+        <ul>
+          <li><strong>Calendar access not granted</strong><br/>
+            Enable it in <code>Settings → Privacy & Security → Calendars</code>.
+          </li>
+          <li style="margin-top:10px;"><strong>Events not showing</strong><br/>
+            Check the correct calendar is enabled in the Calendar app, then restart PenTimer.
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Privacy</h2>
+      <p>
+        PenTimer can save sessions to Apple Calendar only with your permission.
+        The app does not require accounts and does not track users.
+      </p>
+    </div>
+
+    <footer>
+      © <span id="y"></span> PenTimer. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
